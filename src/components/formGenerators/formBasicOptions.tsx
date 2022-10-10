@@ -3,9 +3,9 @@ import { FormEvent } from "react";
 import { useTemplateContext } from "../../context";
 
 const FormBasicOptions = (): JSX.Element => {
-  const { templateOptions, currentTemplateData, setCurrentTemplateData } =
+  const { templateOptions, currentTemplateData, setCurrentTemplateData, templateDataList } =
     useTemplateContext().templateContext;
-  const [localData, setLocalData] = React.useState({});
+  const [localData, setLocalData] = React.useState<Record<string, string|number>>(templateDataList ? templateDataList[0] : {});
 
   const handleOnChange = (e: React.FormEvent<HTMLFormElement>) => {
     setLocalData({
@@ -44,6 +44,7 @@ const FormBasicOptions = (): JSX.Element => {
                   className="form-control"
                   placeholder=""
                   name={option.option}
+                  value={localData ? localData[option.option]: ''}
                 />
               </div>
             ) : (

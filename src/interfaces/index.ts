@@ -4,7 +4,7 @@ export interface IsTemplateContext {
   templateOptionsNames: string[];
   TemplateComponent: (() => JSX.Element | null) | null;
   templateGeneratorFunction: ((list: any, options?: any[]) => string) | null;
-  templateDataList: Record<string, string>[];
+  templateDataList: Record<string, string | number>[];
   renderResult: boolean;
   result: string;
   setCurrentTemplateData: (a: any) => void;
@@ -17,7 +17,7 @@ export interface IsCurrentTemplateData {
   templateOptionsNames: string[];
   TemplateComponent: (() => JSX.Element | null) | null;
   templateGeneratorFunction: ((list: any, options?: any[]) => string) | null;
-  templateDataList: Record<string, string>[];
+  templateDataList: Record<string, string | number>[];
   renderResult: boolean;
   result: string;
 }
@@ -31,7 +31,12 @@ export interface IsOptionsTemplate {
 export interface IsTemplateGenerator {
   options: IsOptionsTemplate[];
   optionsNames?: string[];
-  selectOption: { name: string; value: string, image:string, description:string };
+  selectOption: {
+    name: string;
+    value: string;
+    image: string;
+    description: string;
+  };
   formTemplate: null | ((arg0: Object) => JSX.Element);
   templateGenerator: ((list: any, options?: any[]) => string) | null;
 }

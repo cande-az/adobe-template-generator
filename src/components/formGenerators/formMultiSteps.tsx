@@ -7,13 +7,14 @@ const FormMultiSteps = () => {
     templateOptionsNames,
     setCurrentTemplateData,
     currentTemplateData,
+    templateDataList
   } = useTemplateContext().templateContext;
   const emptyModel = templateOptionsNames.reduce(
     (o, key) => Object.assign(o, { [key]: "" }),
     {}
   );
 
-  const [stepsData, setStepsData] = React.useState([emptyModel]);
+  const [stepsData, setStepsData] = React.useState(templateDataList.length ? templateDataList : [emptyModel]);
 
   const handleOnAdd = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const newModel = { ...emptyModel, orden: stepsData.length + 1 };
@@ -82,6 +83,7 @@ const FormMultiSteps = () => {
                         id={`${index}`}
                         placeholder=""
                         name={option.option}
+                        value={stepsData ? stepsData[index][option.option]: ''}
                       />
                     </div>
                   ) : null}

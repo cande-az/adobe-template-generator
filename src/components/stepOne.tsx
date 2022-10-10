@@ -3,6 +3,7 @@ import { templates } from "../templates";
 import { useTemplateContext } from "../context/index";
 import { IsTemplateGenerator } from "../interfaces";
 import PreviewTemplateInfo from "./previewTemplateInfo";
+import cleanData from "../utils/cleanData";
 
 const StepOne = () => {
   const [selectTemplate, setSelectTemplate] = React.useState("");
@@ -18,12 +19,7 @@ const StepOne = () => {
       await import(`../templates/instances/${selectTemplate}.tsx`)
     ).default;
 
-    setCurrentTemplateData(
-      Object.keys(currentTemplateData).reduce(
-        (o, key) => Object.assign(o, { [key]: "" }),
-        {}
-      )
-    );
+    cleanData(currentTemplateData,setCurrentTemplateData)
 
     setCurrentTemplateData({
       ...currentTemplateData,

@@ -35,6 +35,12 @@ h4 {
     background-color: $alert;
     color: white;
   }
+  &-back{
+    all:unset;
+    svg{
+      fill:$primary;
+    }
+  }
 }
 
 .App {
@@ -54,6 +60,9 @@ h4 {
         text-align: center;
         color: white;
         font-weight: 600;
+      }
+      button{
+        margin-left: auto;
       }
     }
     .preview-box {

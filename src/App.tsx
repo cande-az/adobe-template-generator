@@ -3,6 +3,9 @@ import StepResult from "./components/stepResult";
 import StepTwo from "./components/stepTwo";
 import { useTemplateContext } from "./context";
 import "./styles/global.scss";
+import backStep from "./utils/backStep";
+import cleanData from "./utils/cleanData";
+import { BsArrowLeftCircleFill } from "react-icons/bs";
 
 function App() {
   const {
@@ -13,12 +16,7 @@ function App() {
   } = useTemplateContext().templateContext;
 
   const handleOnRestart = () => {
-    setCurrentTemplateData(
-      Object.keys(currentTemplateData).reduce(
-        (o, key) => Object.assign(o, { [key]: "" }),
-        {}
-      )
-    );
+    cleanData(currentTemplateData, setCurrentTemplateData);
     setCurrentTemplateData({ ...currentTemplateData, currentStep: 1 });
   };
   return (
@@ -40,6 +38,16 @@ function App() {
           <label className="label">2</label>
 
           <h3>Personalizar Información</h3>
+          {currentStep === 2 ? (
+            <button
+              onClick={() =>
+                backStep(currentTemplateData, setCurrentTemplateData)
+              }
+              className="btn-back"
+            >
+              <BsArrowLeftCircleFill />
+            </button>
+          ) : null}
         </div>
         {currentStep === 2 ? <StepTwo /> : null}
       </div>
@@ -47,6 +55,16 @@ function App() {
         <div className="step-header">
           <label className="label">3</label>
           <h3>Generar código final</h3>
+          {currentStep === 3 ? (
+            <button
+              onClick={() =>
+                backStep(currentTemplateData, setCurrentTemplateData)
+              }
+              className="btn-back"
+            >
+              <BsArrowLeftCircleFill />
+            </button>
+          ) : null}
         </div>
         {currentStep === 3 && renderResult ? <StepResult /> : null}
       </div>
