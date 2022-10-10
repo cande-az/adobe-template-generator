@@ -5,6 +5,8 @@ const data: IsTemplateGenerator = {
   selectOption: {
     name: "Display name on list",
     value: "the name of this file",
+    image: "",
+    description: "",
   },
   options: [
     {

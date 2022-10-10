@@ -5,7 +5,7 @@ import FormBasicOptions from "../../components/formGenerators/formBasicOptions";
 import simpleHTMLRender from "../../utils/simpleHTMLRender";
 
 const data: IsTemplateGenerator = {
-  selectOption: { name: "Basic Popup", value: "basicPopup" },
+  selectOption: { name: "Basic Popup", value: "basicPopup", image:"", description:"" },
   options: [
     {
       displayName: "Titulo",

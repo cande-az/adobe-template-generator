@@ -45,6 +45,7 @@ const FormMultiSteps = () => {
       ...currentTemplateData,
       templateDataList: stepsData,
       renderResult: true,
+      currentStep: 3
     });
   };
 

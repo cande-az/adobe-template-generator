@@ -8,10 +8,12 @@ const data: IsTemplateGenerator = {
   selectOption: {
     name: "Plantilla Paso a Paso",
     value: "stepByStepTemplateData",
+    image:"image-1",
+    description:"Explicacion paso a paso para crear una guia de usuario"
   },
   options: [{
     displayName: "Titulo",
-    option: "title",
+    option: "titulo",
     isEditable: true,
     isRequired: true,
   },

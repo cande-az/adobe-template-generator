@@ -16,7 +16,6 @@ export function TemplateContextProvider(props: {
   const { children } = props;
   const [currentTemplateData, setCurrentTemplateData] = React.useState<IsCurrentTemplateData>({
     currentStep: 1,
-    templateName: "",
     templateOptions: [],
     templateOptionsNames:[],
     TemplateComponent: null,

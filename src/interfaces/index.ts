@@ -1,6 +1,5 @@
 export interface IsTemplateContext {
   currentStep: number;
-  templateName: string;
   templateOptions: IsOptionsTemplate[];
   templateOptionsNames: string[];
   TemplateComponent: (() => JSX.Element | null) | null;
@@ -14,7 +13,6 @@ export interface IsTemplateContext {
 
 export interface IsCurrentTemplateData {
   currentStep: number;
-  templateName: string;
   templateOptions: IsOptionsTemplate[];
   templateOptionsNames: string[];
   TemplateComponent: (() => JSX.Element | null) | null;
@@ -33,7 +31,7 @@ export interface IsOptionsTemplate {
 export interface IsTemplateGenerator {
   options: IsOptionsTemplate[];
   optionsNames?: string[];
-  selectOption: { name: string; value: string };
+  selectOption: { name: string; value: string, image:string, description:string };
   formTemplate: null | ((arg0: Object) => JSX.Element);
   templateGenerator: ((list: any, options?: any[]) => string) | null;
 }

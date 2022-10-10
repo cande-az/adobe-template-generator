@@ -8,7 +8,9 @@ class templateGenerator implements IsTemplateGenerator {
     isRequired: boolean;
   }[];
   optionsNames?: string[];
-  selectOption: { name: string; value: string };
+  selectOption: {
+    image: string; name: string; value: string , description:string
+};
   formTemplate: ((arg0: Object) => JSX.Element) | null;
   templateGenerator: ((list: any, options?: any[]) => string) | null;
   constructor({

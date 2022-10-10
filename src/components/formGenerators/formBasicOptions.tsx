@@ -21,6 +21,7 @@ const FormBasicOptions = (): JSX.Element => {
       ...currentTemplateData,
       templateDataList: [...[], localData],
       renderResult: true,
+      currentStep: 3
     });
   };
 
