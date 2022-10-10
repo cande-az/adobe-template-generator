@@ -26,14 +26,24 @@ function App() {
           <span className="navbar-brand mb-0 h1">Adobe Target Plantilla</span>
         </div>
       </nav>
-      <section id="step-one" className="step-container container py-2">
+      <section
+        id="step-one"
+        className={`step-container container py-2 ${
+          currentStep === 1 ? "active" : ""
+        }`}
+      >
         <div className="step-header">
           <label className="label">1</label>
           <h3>Selecciona tu plantilla</h3>
         </div>
         {currentStep === 1 ? <StepOne /> : null}
       </section>
-      <div id="step-two" className="step-container container py-2">
+      <div
+        id="step-two"
+        className={`step-container container py-2 ${
+          currentStep === 2 ? "active" : ""
+        }`}
+      >
         <div className="step-header">
           <label className="label">2</label>
 
@@ -51,7 +61,12 @@ function App() {
         </div>
         {currentStep === 2 ? <StepTwo /> : null}
       </div>
-      <div id="step-result" className="step-container container py-2">
+      <div
+        id="step-result"
+        className={`step-container container py-2 ${
+          currentStep === 3 ? "active" : ""
+        }`}
+      >
         <div className="step-header">
           <label className="label">3</label>
           <h3>Generar código final</h3>

@@ -35,16 +35,21 @@ h4 {
     background-color: $alert;
     color: white;
   }
-  &-back{
-    all:unset;
-    svg{
-      fill:$primary;
+  &-back {
+    all: unset;
+    svg {
+      fill: $primary;
     }
   }
 }
 
 .App {
   .step-container {
+    &.active {
+      .step-header {
+        background-color: $cta;
+      }
+    }
     .step-header {
       background-color: $secondary;
       display: flex;
@@ -61,7 +66,7 @@ h4 {
         color: white;
         font-weight: 600;
       }
-      button{
+      button {
         margin-left: auto;
       }
     }

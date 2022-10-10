@@ -12,7 +12,7 @@ const data: IsTemplateGenerator = {
     {
       displayName: "Titulo",
       option: "title",
-      isEditable: true,
+      isEditable: true, // The user should see the option to modify this?
       isRequired: true,
     },
   ],
