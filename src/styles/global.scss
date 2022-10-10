@@ -12,13 +12,29 @@ h3 {
   color: $primary;
 }
 
-.btn-primary {
+h4 {
+  font-size: 12pt;
+  margin-bottom: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.btn {
   all: unset;
-  background-color: $primary;
   border-radius: 1.5rem;
   padding: 0.5rem 1.5rem;
-  color: white;
   font-size: 10pt;
+  &-primary {
+    @extend .btn;
+    background-color: $primary;
+    color: white;
+  }
+  &-alert {
+    @extend .btn;
+    background-color: $alert;
+    color: white;
+  }
 }
 
 .App {
@@ -42,9 +58,6 @@ h3 {
     }
     .step-content-container {
       padding: 1rem;
-      .btn-primary {
-        margin-top: 1rem;
-      }
     }
     .code-container {
       * {
