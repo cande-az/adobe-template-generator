@@ -21,6 +21,7 @@ const StepOne = () => {
       TemplateComponent: template.formTemplate,
       templateGeneratorFunction: template.templateGenerator,
       templateOptions: template.options,
+      templateOptionsNames: template.optionsNames,
     });
   };
 
@@ -37,7 +38,7 @@ const StepOne = () => {
             <option value={temp.value}>{temp.name}</option>
           ))}
         </select>
-        <input className="btn-primary" type="submit" />
+        <input className="btn-primary mt-3" type="submit" value="Siguiente"/>
       </form>
     </div>
   );

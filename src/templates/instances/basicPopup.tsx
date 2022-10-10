@@ -1,28 +1,75 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { IsTemplateGenerator } from "../../interfaces";
 import templateGenerator from "../generator";
-import { useTemplateContext } from "../../context";
 import FormBasicOptions from "../../components/formGenerators/formBasicOptions";
 import simpleHTMLRender from "../../utils/simpleHTMLRender";
-import React from "react";
 
 const data: IsTemplateGenerator = {
   selectOption: { name: "Basic Popup", value: "basicPopup" },
   options: [
-    "title",
-    "content",
-    "link",
-    "linkLabel",
-    "imgDesktop1x",
-    "imgDesktop2x",
-    "imgTablet1x",
-    "imgTablet2x",
-    "imgMobile1x",
-    "imgMobile2x",
+    {
+      displayName: "Titulo",
+      option: "title",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Contenido / Descripción",
+      option: "content",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Url",
+      option: "link",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Texto Url",
+      option: "linkLabel",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Escritorio 1X",
+      option: "imgDesktop1x",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Escritorio 2X",
+      option: "imgDesktop2x",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Tablet 1X",
+      option: "imgTablet1x",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Tablet 2X",
+      option: "imgTablet2x",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Mobil 1X",
+      option: "imgMobile1x",
+      isEditable: true,
+      isRequired: true,
+    },
+    {
+      displayName: "Imagen Mobil 2X",
+      option: "imgMobile2x",
+      isEditable: true,
+      isRequired: true,
+    },
   ],
   formTemplate: FormBasicOptions,
   templateGenerator: (templateDataList: Record<string, string>[]) => {
-    console.log(templateDataList)
     const finalTemplate = `    <!-- Variable para Trackear Ejecuciones del Popup -->
         <script>
             adobe.target.trackEvent({ mbox: 'NOMBRE_TRACK' });

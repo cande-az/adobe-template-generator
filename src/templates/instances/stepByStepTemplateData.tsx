@@ -9,7 +9,39 @@ const data: IsTemplateGenerator = {
     name: "Plantilla Paso a Paso",
     value: "stepByStepTemplateData",
   },
-  options: ["image", "image2x", "titulo", "descripcion", "active", "orden"],
+  options: [{
+    displayName: "Titulo",
+    option: "title",
+    isEditable: true,
+    isRequired: true,
+  },
+  {
+    displayName: "Descripcion",
+    option: "descripcion",
+    isEditable: true,
+    isRequired: true,
+  },
+  {
+    displayName: "Imagen 1x",
+    option: "image",
+    isEditable: true,
+    isRequired: true,
+  },{
+    displayName: "Imagen 2x",
+    option: "image2x",
+    isEditable: true,
+    isRequired: true,
+  },{
+    displayName: "Orden",
+    option: "orden",
+    isEditable: false,
+    isRequired: true,
+  },{
+    displayName: "Active",
+    option: "active",
+    isEditable: false,
+    isRequired: true,
+  }],
   formTemplate: FormMultiSteps,
   templateGenerator: (
     templateDataList: Record<string, string>[],

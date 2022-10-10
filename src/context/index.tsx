@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext } from "react";
-import { IsTemplateContext } from "../interfaces";
+import { IsCurrentTemplateData, IsTemplateContext } from "../interfaces";
 
 export const TemplateContext = createContext<any>(null);
 
@@ -14,10 +14,11 @@ export function TemplateContextProvider(props: {
   children: React.ReactNode;
 }): JSX.Element {
   const { children } = props;
-  const [currentTemplateData, setCurrentTemplateData] = React.useState({
+  const [currentTemplateData, setCurrentTemplateData] = React.useState<IsCurrentTemplateData>({
     currentStep: 1,
     templateName: "",
     templateOptions: [],
+    templateOptionsNames:[],
     TemplateComponent: null,
     templateGeneratorFunction: null,
     renderResult:false,

@@ -10,7 +10,7 @@ const StepResult = (): JSX.Element => {
     templateGeneratorFunction,
     result,
     renderResult,
-    templateOptions,
+    templateOptionsNames,
   } = useTemplateContext().templateContext;
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const StepResult = (): JSX.Element => {
       ...currentTemplateData,
       result: (
         templateGeneratorFunction as (list: any, options?: any[]) => string
-      )(templateDataList, templateOptions),
+      )(templateDataList, templateOptionsNames),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderResult]);
