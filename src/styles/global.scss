@@ -1,0 +1,55 @@
+@import "./_variables.scss";
+
+* {
+  font-family: "Inter", "Open Sans";
+  font-size: 12pt;
+}
+
+h3 {
+  font-size: 12pt;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: $primary;
+}
+
+.btn-primary {
+  all: unset;
+  background-color: $primary;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-size: 10pt;
+}
+
+.App {
+  .step-container {
+    .step-header {
+      background-color: $secondary;
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1.5rem;
+      align-items: center;
+      .label {
+        border-radius: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $alert;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+      }
+    }
+    .step-content-container {
+      padding: 1rem;
+      .btn-primary {
+        margin-top: 1rem;
+      }
+    }
+    .code-container {
+      * {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+}
