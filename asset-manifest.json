@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/adobe-template-generator/static/css/main.36dbd094.css",
-    "main.js": "/adobe-template-generator/static/js/main.1b367055.js",
+    "main.css": "/adobe-template-generator/static/css/main.227c69b6.css",
+    "main.js": "/adobe-template-generator/static/js/main.c801c060.js",
     "static/js/8049.94121a69.chunk.js": "/adobe-template-generator/static/js/8049.94121a69.chunk.js",
     "static/js/2410.f3477f35.chunk.js": "/adobe-template-generator/static/js/2410.f3477f35.chunk.js",
-    "static/js/3216.b02ffbb0.chunk.js": "/adobe-template-generator/static/js/3216.b02ffbb0.chunk.js",
+    "static/js/3216.17d260bf.chunk.js": "/adobe-template-generator/static/js/3216.17d260bf.chunk.js",
     "react-syntax-highlighter/refractor-core-import.js": "/adobe-template-generator/static/js/react-syntax-highlighter/refractor-core-import.f6cb5c4f.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/adobe-template-generator/static/js/react-syntax-highlighter_languages_refractor_abap.7fdfa4e2.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/adobe-template-generator/static/js/react-syntax-highlighter_languages_refractor_actionscript.0f1dd2f5.chunk.js",
@@ -160,9 +160,9 @@
     "static/media/image-2.png": "/adobe-template-generator/static/media/image-2.5ed0730b7be2e6605f53.png",
     "static/media/image-1.png": "/adobe-template-generator/static/media/image-1.92a90be198787864e12a.png",
     "index.html": "/adobe-template-generator/index.html",
-    "main.36dbd094.css.map": "/adobe-template-generator/static/css/main.36dbd094.css.map",
-    "main.1b367055.js.map": "/adobe-template-generator/static/js/main.1b367055.js.map",
-    "3216.b02ffbb0.chunk.js.map": "/adobe-template-generator/static/js/3216.b02ffbb0.chunk.js.map",
+    "main.227c69b6.css.map": "/adobe-template-generator/static/css/main.227c69b6.css.map",
+    "main.c801c060.js.map": "/adobe-template-generator/static/js/main.c801c060.js.map",
+    "3216.17d260bf.chunk.js.map": "/adobe-template-generator/static/js/3216.17d260bf.chunk.js.map",
     "refractor-core-import.f6cb5c4f.chunk.js.map": "/adobe-template-generator/static/js/react-syntax-highlighter/refractor-core-import.f6cb5c4f.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.7fdfa4e2.chunk.js.map": "/adobe-template-generator/static/js/react-syntax-highlighter_languages_refractor_abap.7fdfa4e2.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.0f1dd2f5.chunk.js.map": "/adobe-template-generator/static/js/react-syntax-highlighter_languages_refractor_actionscript.0f1dd2f5.chunk.js.map",
@@ -317,7 +317,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.37c13fe7.chunk.js.map": "/adobe-template-generator/static/js/react-syntax-highlighter_languages_refractor_yaml.37c13fe7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36dbd094.css",
-    "static/js/main.1b367055.js"
+    "static/css/main.227c69b6.css",
+    "static/js/main.c801c060.js"
   ]
 }
