@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkadobe_template_generator=self.webpackChunkadobe_template_generator||[]).push([[8049],{8049:function(e,a,t){e.exports=t.p+"static/media/image-1.92a90be198787864e12a.png"}}]);
