@@ -17,7 +17,10 @@ const data: IsTemplateGenerator = {
     },
   ],
   formTemplate: null, // Component that use the options list to render form information
-  templateGenerator: (templateDataList: Record<string, string>[]) => {
+  templateGenerator: (
+    templateDataList: Record<string, string>[],
+    options?: any[]
+  ) => {
     const finalTemplate = ``;
     return finalTemplate;
   },

@@ -5,6 +5,7 @@ const forHTMLRender = (props: {
 }) => {
   const { list, html, options } = props;
   let finalHTML = "";
+  console.log(list)
   list.forEach((item) => {
     let newFragment = html;
     options.forEach((key: string | number) => {

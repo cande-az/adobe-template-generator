@@ -10,7 +10,7 @@ const FormMultiSteps = () => {
     templateDataList
   } = useTemplateContext().templateContext;
   const emptyModel = templateOptionsNames.reduce(
-    (o, key) => Object.assign(o, { [key]: "" }),
+    (o, key) => key !== "orden" ? Object.assign(o, { [key]: "" }): Object.assign(o, { [key]: 1 }),
     {}
   );
 
@@ -44,7 +44,7 @@ const FormMultiSteps = () => {
     console.log(stepsData);
     setCurrentTemplateData({
       ...currentTemplateData,
-      templateDataList: stepsData,
+      templateDataList: stepsData.map(step => ({...step, total: stepsData.length})),
       renderResult: true,
       currentStep: 3
     });
