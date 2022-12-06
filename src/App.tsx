@@ -30,7 +30,7 @@ function App() {
           </div>
           <div className=" right-container">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Interbank_logo.svg/2560px-Interbank_logo.svg.png"
+              src=""
               alt=""
             />
           </div>
